@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "BLEDefaults.characteristicUUID.unsafeMutableAddressor:BLEDefaults.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UUID()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BLEPeripheralManager.send():BLEPeripheralManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "BLECentralManager.centralManager(_:didDiscover:advertisementData:rssi:):BLECentralManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "peripheral.services">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BLECentralManager.centralManager(_:didConnect:):BLECentralManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "peripheral.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BLECentralManager.prepareDevInfo(_:rssi:device:):BLECentralManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "pow(((-69 - (rssi.doubleValue))/(10 * 2)), 10) ">
+            </PersistentString>
+            <PersistentString
+               value = "rssi.doubleValue*1.0/txPower">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
