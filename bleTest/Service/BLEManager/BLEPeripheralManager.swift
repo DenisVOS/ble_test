@@ -10,7 +10,8 @@ import Foundation
 import CoreBluetooth
 
 protocol BLEPeripheralManagerDelegate {
-   func dataReceived(_ str: String)
+    func dataReceived(_ str: String)
+    func connected()
 }
 
 final class BLEPeripheralManager: NSObject {
@@ -25,9 +26,9 @@ final class BLEPeripheralManager: NSObject {
     private var sendingDataIndex: Int
     private var sendingEOM: Bool = false
     
-    private var delegate: BLECentralManagerDelegate
+    private var delegate: BLEPeripheralManagerDelegate
     
-    init(delegate: BLECentralManagerDelegate) {
+    init(delegate: BLEPeripheralManagerDelegate) {
         self.sendingData = Data()
         self.sendingDataIndex = 0
         self.delegate = delegate
@@ -136,6 +137,7 @@ extension BLEPeripheralManager: CBPeripheralManagerDelegate {
 
     func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
         self.central = central
+        self.delegate.connected()
     }
 
     func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didUnsubscribeFrom characteristic: CBCharacteristic) {

@@ -60,5 +60,7 @@ extension SendingInteractor: BLECentralManagerDelegate {
 }
 
 extension SendingInteractor: BLEPeripheralManagerDelegate {
-    
+    func connected() {
+        self.output?.connected()
+    }
 }
